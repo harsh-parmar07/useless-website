@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(circle, #ff4b2b, #ff416c);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem; 
+  letter-spacing: 3px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  word-wrap: break-word;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect */
+}
+
+/* individual letters (spans) */
+h1 span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.6s ease-out, color 0.5s ease-in-out;
+  color: #fff;
+  position: relative;
+}
+
+/* Destroyed letters */
+h1 span.destroyed {
+  opacity: 0;
+  color: #000;
+}
+
+/* Progress bar styling */
+.progress {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+}
